@@ -1,0 +1,26 @@
+#This is a test layout
+dice:
+x: 75
+y: 75
+width: 75
+height: 75
+
+intel:
+extends: dice
+file: C:\Work\Spaceships\space-octopus\cloak-dagger.svg
+
+attack:
+extends: dice
+file: C:\Work\Spaceships\space-octopus\targeting.svg
+
+leadership:
+extends: dice
+file: C:\Work\Spaceships\space-octopus\steelwing-emblem.svg
+
+utility:
+extends: dice
+file: C:\Work\Spaceships\space-octopus\auto-repair.svg
+
+shield:
+extends: dice
+file: sC:\Work\Spaceships\space-octopus\hieldcomb.svg
