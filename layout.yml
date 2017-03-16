@@ -1,26 +1,119 @@
 #This is a test layout
-dice:
+Tactics:
+  font: Verdana 36
+  align: left
+  color: 'black'
+
+
+Title:
+  extends: Tactics
+  width: 625
+  height: 50
   x: 75
   y: 75
-  width: 75
-  height: 75
+  
 
-intel:
-  extends: dice
-  file: cloak-dagger.svg
+art:
+  x: 75
+  y: 150
+  width: 675
+  height: 520
 
-attack:
-  extends: dice
-  file: C:\Work\Spaceships\space-octopus\targeting.svg
+Bonus:
+  extends: Tactics
+  valign: middle
+  align: center
+  height: 100
+  w: &position_width 169
+  width: *position_width
+  x: 75
+  y: 675
+  font_size: 18
 
-leadership:
-  extends: dice
-  file: C:\Work\Spaceships\space-octopus\steelwing-emblem.svg
+BonusPicket:
+  extends: Bonus
+  
+  
+BonusVanguard:
+  extends: BonusPicket
+  x: += 169
+  
+BonusMain:
+  extends: BonusVanguard
+  x: += 169
+  
+BonusRear:
+  extends: BonusMain
+  x: += 169
+    
 
-utility:
-  extends: dice
-  file: C:\Work\Spaceships\space-octopus\auto-repair.svg
+Ability:
+  extends: Tactics
+  y: 780
+  x: 75
+  font_size: 18
+  width: 675
 
-shield:
-  extends: dice
-  file: C:\Work\Spaceships\space-octopus\shieldcomb.svg
+BonusAbility:
+  extends: Ability
+  y: 890
+  width: 675
+  
+#aliases for copyright
+copy:
+  extends: copyright
+credit:
+  extends: copyright
+credits:
+  extends: copyright
+
+# The "cut line", without rounded corners
+cut:
+  x: 37.5
+  y: 37.5
+  width: 750
+  height: 1050
+
+upper_right:
+  x: 700
+  y: 75
+  width: 50
+  height: 50
+  align: right
+cost1:
+  extends: upper_right
+  
+cost2:
+  extends: cost1
+  y: += 50
+cost3:
+  extends: cost2
+  y: += 50
+cost4:
+  extends: cost3
+  y: += 50  
+
+#The "safe zone" as defined by TheGameCrafter poker cards
+
+safe:
+  x: 75
+  y: 75
+  width: 675
+  height: 975
+  radius: 16
+  dash: 3 3
+
+copyright:
+  x: 75
+  y: 1025
+  width: 675
+  height: 25
+  font_size: 16
+  align: center
+  valign: bottom
+copy:
+  extends: copyright
+credit:
+  extends: copyright
+credits:
+  extends: copyright
