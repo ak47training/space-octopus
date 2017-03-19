@@ -75,22 +75,22 @@ cut:
   height: 1050
 
 upper_right:
-  x: 700
+  x: 490
   y: 75
-  width: 50
-  height: 50
+  width: 250
   align: right
-cost1:
+  
+cost0:
   extends: upper_right
   
+cost1:
+  extends: cost0
+  y: += 50
 cost2:
   extends: cost1
   y: += 50
 cost3:
   extends: cost2
-  y: += 50
-cost4:
-  extends: cost3
   y: += 50  
 
 #The "safe zone" as defined by TheGameCrafter poker cards
