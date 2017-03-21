@@ -11,20 +11,38 @@ Squib::Deck.new cards: data['Name'].size, layout: ['layout.yml'] do
   rect layout: 'safe'
   titlesizes = data['Name'].map do |name|
     case name.length
-    when 0..7 then 32
-    when 8..9 then 24
-    when 10..50 then 18
+    when 0..10 then 26
+    when 11..15 then 24
+    when 16..50 then 20
     end
   end
+  abilsizes = data['Text'].map do |name1|
+    unless name1 == nil then
+	  case name1.length
+	  when 0..50 then 20
+	  when 51..100 then 18
+	  when 101..200 then 16
+	  end
+	end
+  end
+  bonussizes = data['Bonus'].map do |name2|
+    unless name2 == nil then
+	  case name2.length
+	  when 0..50 then 20
+	  when 51..100 then 18
+	  when 101..200 then 16
+	  end
+	end
+  end
   text str: data['Name'], layout: :Title, font_size: titlesizes
-  text str: data['Text'], layout: 'Ability'
+  text str: data['Text'], ellipsize: false, layout: 'Ability', font_size: abilsizes
 
   
-  text str: data['Bonus'], layout: 'BonusAbility'
-  text str: data['Picket bonus'], layout: 'BonusPicket'
-  text str: data['Vanguard bonus'], layout: 'BonusVanguard'
-  text str: data['Main Fleet bonus'], layout: 'BonusMain'
-  text str: data['Rearguard bonus'], layout: 'BonusRear'
+  text str: data['Bonus'],  ellipsize: false, layout: 'BonusAbility', font_size: bonussizes
+  text str: data['Picket bonus'], ellipsize: false, layout: 'BonusPicket'
+  text str: data['Vanguard bonus'], ellipsize: false, layout: 'BonusVanguard'
+  text str: data['Main Fleet bonus'], ellipsize: false, layout: 'BonusMain'
+  text str: data['Rearguard bonus'], ellipsize: false, layout: 'BonusRear'
   text str: Time.now, layout: 'credits'
   
   #Cost icons in top right:
