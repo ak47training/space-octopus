@@ -1,0 +1,115 @@
+#This is a test layout
+Ships:
+  font: Verdana 36
+  align: left
+  color: 'black'
+
+
+Title:
+  extends: Ships
+  width: 625
+  height: 50
+  x: 75
+  y: 75
+  valign: bottom
+  
+
+art:
+  x: 75
+  y: 150
+  width: 675
+  height: 520
+
+
+Type:
+  x: 75
+  y: 675
+  font_size: 18
+  height: 50
+  width: 675
+  align: left
+  valign: bottom
+StatRange:
+  extends: Type
+  align: right
+  
+Bonus:
+  extends: Ships
+  valign: middle
+  align: center
+  height: 100
+  w: &position_width 169
+  width: *position_width
+  x: 75
+  y: 675
+  font_size: 18
+
+ModAbility:
+  extends: Ships
+  y: 780
+  x: 75
+  font_size: 18
+  width: 675
+
+TextAbility:
+  extends: ModAbility
+  y: 890
+  width: 675
+
+StatATK:
+  x: 50
+  y: 1000
+StatSPD:
+  extends: StatATK
+  x: 540
+ 
+StatDEF:
+  extends: StatSPD
+  x: += 75  
+
+#aliases for copyright
+copy:
+  extends: copyright
+credit:
+  extends: copyright
+credits:
+  extends: copyright
+
+# The "cut line", without rounded corners
+cut:
+  x: 37.5
+  y: 37.5
+  width: 750
+  height: 1050
+
+upper_right:
+  x: 490
+  y: 75
+  width: 300
+  align: right
+  
+
+#The "safe zone" as defined by TheGameCrafter poker cards
+
+safe:
+  x: 75
+  y: 75
+  width: 675
+  height: 975
+  radius: 16
+  dash: 3 3
+
+copyright:
+  x: 75
+  y: 1025
+  width: 675
+  height: 25
+  font_size: 16
+  align: center
+  valign: bottom
+copy:
+  extends: copyright
+credit:
+  extends: copyright
+credits:
+  extends: copyright
