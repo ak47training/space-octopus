@@ -30,7 +30,24 @@ Bonus:
   x: 75
   y: 675
   font_size: 18
-
+BonusLine:
+  x1: 75
+  x2: 750
+  y1: 775
+  y2: 775
+BonusPicketLine:
+  extends: BonusLine
+  x1: += 169
+  x2: 244
+  y2: -= 105
+BonusVanguardLine:
+  extends: BonusPicketLine
+  x1: += 169
+  x2: += 169
+BonusMainLine:
+  extends: BonusVanguardLine
+  x1: += 169
+  x2: += 169
 BonusPicket:
   extends: Bonus
   

@@ -116,11 +116,17 @@ end
 
 
 
-Squib::Deck.new cards: tactics_data['Name'].size, layout: ['layout.yml'] do
+Squib::Deck.new cards: tactics_data['Name'].size, layout: ['layout.yml', 'ships_layout.yml'] do
   background color: 'white'
-  hint text: "#333"
+  /hint text: "#333"/
   rect layout: 'cut'
   rect layout: 'safe'
+  line stroke_width: 1.5, layout: 'BonusLine'
+  line stroke_width: 1.5, layout: 'BonusPicketLine'
+  line stroke_width: 1.5, layout: 'BonusVanguardLine'
+  line stroke_width: 1.5, layout: 'BonusMainLine'
+  line stroke_width: 1.5, layout: 'TitleLine'
+  line stroke_width: 1.5, layout: 'ArtLine'
   titlesizes = tactics_data['Name'].map do |name|
     case name.length
     when 0..10 then 26
@@ -160,7 +166,7 @@ Squib::Deck.new cards: tactics_data['Name'].size, layout: ['layout.yml'] do
   #Cost icons in top right:
   text(str: tactics_data['Cost'], layout: 'upper_right') do |embed|
     embed.svg key: '(ATK)', width: cost_icon_width, height: cost_icon_height, mask: attack_color, file: 'icons\attack.svg'
-	embed.svg key: '(DEF)', width: cost_icon_width, height: cost_icon_height, mask: attack_color, file: 'icons\defend.svg'
+	embed.svg key: '(DEF)', width: cost_icon_width, height: cost_icon_height, mask: defend_color, file: 'icons\defend.svg'
 	embed.svg key: '(SPD)', width: cost_icon_width, height: cost_icon_height, mask: speed_color, file: 'icons\speed.svg'
 	embed.svg key: '(INT)', width: cost_icon_width, height: cost_icon_height, mask: intel_color, file: 'icons\intel.svg'
 	embed.svg key: '(LDR)', width: cost_icon_width, height: cost_icon_height, mask: leadership_color, file: 'icons\leadership.svg'
