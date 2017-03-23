@@ -12,7 +12,12 @@ Title:
   x: 75
   y: 75
   valign: bottom
-  
+
+TitleLine:
+  x1: 75
+  x2: 750
+  y1: 128
+  y2: 128  
 Provides:
   extends: Title
   width: 250
@@ -25,13 +30,19 @@ art:
   width: 675
   height: 520
 
+ArtLine:
+  x1: 75
+  x2: 750
+  y1: 670
+  y2: 670
 
 Type:
   x: 75
+  
   y: 675
   font_size: 18
   height: 50
-  width: 675
+  width: 673
   align: left
   valign: bottom
 StatRange:
@@ -55,6 +66,17 @@ ModAbility:
   x: 75
   font_size: 18
   width: 675
+ModLine:
+  x1: 75
+  x2: 750
+  y1: 888
+  y2: 888
+
+TypeLine:
+  x1: 75
+  x2: 750
+  y1: 726
+  y2: 726  
 
 TextAbility:
   extends: ModAbility
@@ -88,7 +110,7 @@ cut:
   height: 1050
 
 upper_right:
-  x: 490
+  x: 445
   y: 75
   width: 300
   align: right
@@ -98,9 +120,9 @@ lower_right:
   y: 1000
   width: 50
   height: 50
-  font_size: 34
-  valign: bottom
-  align: right
+  font_size: 38
+  valign: middle
+  align: center
 next_to_lower_right:
   extends: lower_right
   x: -=50
@@ -110,9 +132,10 @@ lower_left:
   y: 1000
   width: 50
   height: 50
-  font_size: 34
+  font_size: 38
   valign: bottom
-  align: left
+  align: center
+  valign: middle
 #The "safe zone" as defined by TheGameCrafter poker cards
 
 safe:

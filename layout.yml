@@ -76,7 +76,7 @@ cut:
   height: 1050
 
 upper_right:
-  x: 490
+  x: 445
   y: 75
   width: 300
   align: right
