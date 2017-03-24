@@ -59,7 +59,7 @@ Squib::Deck.new cards: ships_data['Name'].size, layout: ['ships_layout.yml'] do
   text str: ranges, ellipsize: false, layout: 'StatRange'
   text str: ships_data['Type keywords'], layout: 'Type'
   
-  text(str: ships_data['Text2'],  ellipsize: false, layout: 'TextAbility', font_size: textsizes) do |embed|
+  text(str: ships_data['Text2'],  markup: true, ellipsize: false, layout: 'TextAbility', font_size: textsizes) do |embed|
     embed.svg key: '(ATK)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, mask: attack_color, file: 'icons\attack.svg'
 	embed.svg key: '(DEF)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, mask: defend_color, file: 'icons\defend.svg'
 	embed.svg key: '(SPD)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, mask: speed_color, file: 'icons\speed.svg'
