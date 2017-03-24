@@ -13,6 +13,7 @@ intel_color = '#C0C0C0'
 leadership_color = '#441111'
 utility_color = '#336622'
 anydie_color = 'blue'
+ewar_color = 'purple'
 icon_in_text_dy = 4
 
 
@@ -66,6 +67,7 @@ Squib::Deck.new cards: ships_data['Name'].size, layout: ['ships_layout.yml'] do
 	embed.svg key: '(INT)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, mask: intel_color, file: 'icons\intel.svg'
 	embed.svg key: '(LDR)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, mask: leadership_color, file: 'icons\leadership.svg'
 	embed.svg key: '(UTL)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, mask: utility_color, file: 'icons\utility.svg'
+	embed.svg key: '(EWR)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, mask: ewar_color, file: 'icons\ewar.svg'
     embed.svg key: '(ANY)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, file: 'icons\anydie.svg'
   end
   text str: Time.now, layout: 'credits'
@@ -76,7 +78,8 @@ Squib::Deck.new cards: ships_data['Name'].size, layout: ['ships_layout.yml'] do
 	embed.svg key: '(INT)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, mask: intel_color, file: 'icons\intel.svg'
 	embed.svg key: '(LDR)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, mask: leadership_color, file: 'icons\leadership.svg'
 	embed.svg key: '(UTL)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, mask: utility_color, file: 'icons\utility.svg'
-    embed.svg key: '(ANY)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, file: 'icons\anydie.svg'
+    embed.svg key: '(EWR)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, mask: ewar_color, file: 'icons\ewar.svg'
+	embed.svg key: '(ANY)', dy: icon_in_text_dy, width: text_icon_width, height: text_icon_height, file: 'icons\anydie.svg'
   end	
   #Cost icons in top right:
   text(str: ships_data['Cost'], layout: 'upper_right') do |embed|
@@ -86,7 +89,8 @@ Squib::Deck.new cards: ships_data['Name'].size, layout: ['ships_layout.yml'] do
 	embed.svg key: '(INT)', width: cost_icon_width, height: cost_icon_height, mask: intel_color, file: 'icons\intel.svg'
 	embed.svg key: '(LDR)', width: cost_icon_width, height: cost_icon_height, mask: leadership_color, file: 'icons\leadership.svg'
 	embed.svg key: '(UTL)', width: cost_icon_width, height: cost_icon_height, mask: utility_color, file: 'icons\utility.svg'
-    embed.svg key: '(ANY)', width: cost_icon_width, height: cost_icon_height, file: 'icons\anydie.svg'
+    embed.svg key: '(EWR)', width: cost_icon_width, height: cost_icon_height, mask: ewar_color, file: 'icons\ewar.svg'
+	embed.svg key: '(ANY)', width: cost_icon_width, height: cost_icon_height, file: 'icons\anydie.svg'
   end
  
   text(str: ships_data['Provides'], layout: 'Provides', angle: Math::PI / 2) do |embed|
@@ -96,7 +100,8 @@ Squib::Deck.new cards: ships_data['Name'].size, layout: ['ships_layout.yml'] do
 	embed.svg key: '(INT)', width: cost_icon_width, height: cost_icon_height, angle: Math::PI*3/2, mask: intel_color, file: 'icons\intel.svg'
 	embed.svg key: '(LDR)', width: cost_icon_width, height: cost_icon_height, angle: Math::PI*3/2, mask: leadership_color, file: 'icons\leadership.svg'
 	embed.svg key: '(UTL)', width: cost_icon_width, height: cost_icon_height, angle: Math::PI*3/2, mask: utility_color, file: 'icons\utility.svg'
-    embed.svg key: '(ANY)', width: cost_icon_width, height: cost_icon_height, angle: Math::PI*3/2, file: 'icons\anydie.svg'
+    embed.svg key: '(EWR)', width: cost_icon_width, height: cost_icon_height, angle: Math::PI*3/2, mask: ewar_color, file: 'icons\ewar.svg'
+	embed.svg key: '(ANY)', width: cost_icon_width, height: cost_icon_height, angle: Math::PI*3/2, file: 'icons\anydie.svg'
   end
 
   
@@ -171,6 +176,7 @@ Squib::Deck.new cards: tactics_data['Name'].size, layout: ['layout.yml', 'ships_
 	embed.svg key: '(INT)', width: cost_icon_width, height: cost_icon_height, mask: intel_color, file: 'icons\intel.svg'
 	embed.svg key: '(LDR)', width: cost_icon_width, height: cost_icon_height, mask: leadership_color, file: 'icons\leadership.svg'
 	embed.svg key: '(UTL)', width: cost_icon_width, height: cost_icon_height, mask: utility_color, file: 'icons\utility.svg'
+	embed.svg key: '(EWR)', width: cost_icon_width, height: cost_icon_height, mask: ewar_color, file: 'icons\ewar.svg'
   end
 	
 
